@@ -79,8 +79,7 @@ void loop() {
   float voc = bme.gas_resistance / 1000.0;
   float dust = readDust();
   
-  Serial.printf("T:%.1fC H:%.1f%% P:%.0fhPa VOC:%.0fk Dust:%.0f\n", 
-                temp, hum, pressure, voc, dust);
+  Serial.printf("%.1f,%.1f%%,%.0f,%.0f,%.0f\n",temp, hum, pressure, voc, dust);
 
   delay(80);  // I2C recovery
   
